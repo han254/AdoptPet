@@ -19,6 +19,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="45dp"
+        android:background="@drawable/rounded_button"
         android:bottomLeftRadius="10dp"
         android:bottomRightRadius="10dp"
         android:fontWeight="200"
