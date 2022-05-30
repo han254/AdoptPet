@@ -22,5 +22,13 @@
         android:fontWeight="700"
         android:textSize="34sp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="406dp"
+        android:textColor="@color/dark"
+        android:text="Find your new pet and we'll guide you the adoption process! See how to adopt."
+      />
 
 </RelativeLayout>
