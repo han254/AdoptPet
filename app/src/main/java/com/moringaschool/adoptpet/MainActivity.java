@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG, location);
                 Intent intent = new Intent(MainActivity.this, petSearchActivity.class);
                 startActivity(intent);
+                intent.putExtra("location", location);
+                startActivity(intent);
                 Toast.makeText(MainActivity.this, location, Toast.LENGTH_LONG).show();
             }
         });
