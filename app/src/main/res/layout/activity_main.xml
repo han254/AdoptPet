@@ -12,6 +12,22 @@
         android:scaleType="centerCrop"
         android:src="@drawable/pet1" />
 
+    <Button
+        android:id="@+id/findPet"
+        android:layout_width="294dp"
+        android:layout_height="61dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="45dp"
+        android:bottomLeftRadius="10dp"
+        android:bottomRightRadius="10dp"
+        android:fontWeight="200"
+        android:text="Get started"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:topLeftRadius="10dp"
+        android:topRightRadius="10dp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
