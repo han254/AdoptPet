@@ -15,10 +15,10 @@
     <Button
         android:id="@+id/findPet"
         android:layout_width="294dp"
-        android:layout_height="61dp"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="45dp"
+        android:layout_marginBottom="25dp"
         android:background="@drawable/rounded_button"
         android:bottomLeftRadius="10dp"
         android:bottomRightRadius="10dp"
@@ -33,20 +33,41 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="327dp"
-        android:text="Adopt Your Favorite Pet"
-        android:textColor="@color/dark"
+        android:layout_marginTop="291dp"
         android:fontWeight="700"
+        android:text="Adopt"
+        android:textColor="@color/dark"
         android:textSize="34sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="406dp"
+        android:layout_marginTop="346dp"
+        android:fontWeight="700"
+        android:text="Your Favorite Pet"
         android:textColor="@color/dark"
-        android:text="Find your new pet and we'll guide you the adoption process! See how to adopt."
+        android:textSize="34sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="413dp"
         android:fontWeight="400"
-        android:textSize="20sp"/>
+        android:text="Find your new pet and we'll guide you the adoption process! See how to adopt."
+        android:textColor="@color/dark"
+        android:textSize="20sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/locationEditText"
+        android:background="@color/darkgray"
+        android:layout_above="@+id/findPet"
+        android:layout_marginBottom="20dp"
+        android:padding="5dp"
+        android:hint="Enter Location"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
