@@ -4,4 +4,12 @@
     android:layout_height="match_parent"
     android:background="@color/gray">
 
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="267dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pet1" />
+
 </RelativeLayout>
