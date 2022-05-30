@@ -16,6 +16,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mFindPetButton = (Button)findViewById(R.id.findPet);
+        mFindPetButton = (Button) findViewById(R.id.findPet);
+        mFindPetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, petSearchActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
 
