@@ -29,6 +29,7 @@
         android:layout_marginTop="406dp"
         android:textColor="@color/dark"
         android:text="Find your new pet and we'll guide you the adoption process! See how to adopt."
-      />
+        android:fontWeight="400"
+        android:textSize="20sp"/>
 
 </RelativeLayout>
