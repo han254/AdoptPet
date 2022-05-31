@@ -10,16 +10,18 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = MainActivity.class.getSimpleName();
-    private Button mFindPetButton;
-    private EditText mLocationEditText;
+    @BindView(R.id.findPet) Button mFindPetButton;
+    @BindView(R.id.locationEditText) EditText mLocationEditText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mLocationEditText = (EditText) findViewById(R.id.locationEditText);
-        mFindPetButton = (Button) findViewById(R.id.findPet);
+        ButterKnife.bind(this);
         mFindPetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

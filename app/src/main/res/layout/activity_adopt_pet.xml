@@ -19,8 +19,7 @@
         android:text="Hup Havanese Dogs"
         android:textColor="@color/dark"
         android:textSize="34sp"
-        android:textStyle="bold" />
-
+        android:textStyle="bold"/>
     <TextView
         android:layout_width="401dp"
         android:layout_height="138dp"
