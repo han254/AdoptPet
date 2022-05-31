@@ -4,6 +4,22 @@
     android:layout_height="match_parent"
     android:background="@color/lightgray">
 
+    <Button
+        android:id="@+id/adoptPet"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/rounded_button"
+        android:bottomLeftRadius="10dp"
+        android:bottomRightRadius="10dp"
+        android:fontWeight="200"
+        android:text="Adopt Pet"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:topLeftRadius="10dp"
+        android:topRightRadius="10dp" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,7 +40,6 @@
         android:layout_marginTop="-70dp"
         android:layout_marginEnd="-9dp"
         android:layout_marginRight="-9dp"
-        android:textColor="@color/white">
-    </ListView>
+        android:textColor="@color/white"></ListView>
 
 </RelativeLayout>
