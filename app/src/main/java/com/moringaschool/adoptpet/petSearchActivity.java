@@ -14,7 +14,7 @@ import android.widget.Toast;
 public class petSearchActivity extends AppCompatActivity {
     private ListView mListView;
     private TextView mLocationTextView;
-    private String[] restaurants = new String[]{"American Staffordshire Terrier","Jack Russell Terrier","Pit Bull", "German Shepherd", "Chihuahua", "Beagle", "morty", "Gilmore,Binx"};
+    private String[] restaurants = new String[]{"American Staffordshire Terrier","Jack Russell Terrier","Pit Bull", "German Shepherd", "Chihuahua", "Beagle", "morty", "Gilmore","Binx","BIchon Frise","French Bulldog","poodle","AMerican Esmiko Dog","Maltese","Havanese","Lhasa apso","samoyed","maltipo"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class petSearchActivity extends AppCompatActivity {
         });
         Intent intent = getIntent();
         String location = intent.getStringExtra("location");
-        mLocationTextView.setText("Here are all the restaurants near: " + location);
+        mLocationTextView.setText("Pets to adopt near you: " + location);
 
     }
 }
