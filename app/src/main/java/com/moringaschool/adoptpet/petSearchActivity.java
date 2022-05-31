@@ -12,10 +12,13 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class petSearchActivity extends AppCompatActivity {
     private Button adoptPet;
-    private ListView mListView;
-    private TextView mLocationTextView;
+    @BindView(R.id.locationTextView) TextView mLocationTextView;
+    @BindView(R.id.listView) ListView mListView;
     private String[] restaurants = new String[]{"Hup Havanese Dog", "American Staffordshire Terrier", "Jack Russell Terrier", "Pit Bull", "German Shepherd", "Chihuahua", "Beagle", "morty", "Gilmore", "Binx", "BIchon Frise", "French Bulldog", "poodle", "AMerican Esmiko Dog", "Maltese", "Havanese", "Lhasa apso", "samoyed", "maltipo"};
 
 
@@ -25,9 +28,8 @@ public class petSearchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pet_search);
         adoptPet = (Button) findViewById(R.id.adoptPet);
 
+        ButterKnife.bind(this);
 
-        mListView = (ListView) findViewById(R.id.listView);
-        mLocationTextView = (TextView) findViewById(R.id.locationTextView);
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, restaurants);
         mListView.setAdapter(adapter);
