@@ -15,12 +15,16 @@
         android:layout_centerHorizontal="true" />
 
     <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/listView"
-        android:textColor="@color/white"
         android:layout_below="@+id/locationTextView"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_marginTop="-70dp"
+        android:layout_marginEnd="-9dp"
+        android:layout_marginRight="-9dp"
+        android:textColor="@color/white">
+    </ListView>
 
 </RelativeLayout>
