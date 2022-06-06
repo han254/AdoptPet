@@ -44,15 +44,5 @@
 
     </ListView>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/locationEditText"
-        android:background="@color/darkgray"
-        android:layout_above="@+id/adoptPet"
-        android:layout_marginBottom="20dp"
-        android:padding="5dp"
-        android:hint="Enter pet"
-        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
