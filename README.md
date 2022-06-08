@@ -3,7 +3,7 @@
 ## Description
 An Android App that helps users find and select pets to adopt near their location.
 ## Setup/Installation Requirements
-* Clone the repository
+* Clone the repository (https://github.com/han254/adoptPet.git).
 * Build
 * Enable gradle and import all dependencies
 * Run it on an emulator or device
