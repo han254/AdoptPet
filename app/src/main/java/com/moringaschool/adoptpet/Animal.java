@@ -28,9 +28,6 @@ public class Animal {
     private Breeds breeds;
     @SerializedName("colors")
     @Expose
-    private Colors colors;
-    @SerializedName("age")
-    @Expose
     private String age;
     @SerializedName("gender")
     @Expose
@@ -52,9 +49,6 @@ public class Animal {
     private List<Photo> photos = null;
     @SerializedName("videos")
     @Expose
-    private List<Video> videos = null;
-    @SerializedName("status")
-    @Expose
     private String status;
     @SerializedName("attributes")
     @Expose
@@ -74,9 +68,6 @@ public class Animal {
     @SerializedName("distance")
     @Expose
     private Double distance;
-    @SerializedName("_links")
-    @Expose
-    private Links links;
 
     /**
      * No args constructor for use in serialization
@@ -91,11 +82,9 @@ public class Animal {
      * @param distance
      * @param publishedAt
      * @param description
-     * @param videos
      * @param type
      * @param photos
      * @param url
-     * @param colors
      * @param breeds
      * @param tags
      * @param organizationId
@@ -106,12 +95,11 @@ public class Animal {
      * @param contact
      * @param name
      * @param attributes
-     * @param links
      * @param id
      * @param age
      * @param status
      */
-    public Animal(Integer id, String organizationId, String url, String type, String species, Breeds breeds, Colors colors, String age, String gender, String size, String coat, String name, String description, List<Photo> photos, List<Video> videos, String status, Attributes attributes, Environment environment, List<String> tags, Contact contact, String publishedAt, Double distance, Links links) {
+    public Animal(Integer id, String organizationId, String url, String type, String species, Breeds breeds, String age, String gender, String size, String coat, String name, String description, List<Photo> photos, String status, Attributes attributes, Environment environment, List<String> tags, Contact contact, String publishedAt, Double distance) {
         super();
         this.id = id;
         this.organizationId = organizationId;
@@ -119,7 +107,6 @@ public class Animal {
         this.type = type;
         this.species = species;
         this.breeds = breeds;
-        this.colors = colors;
         this.age = age;
         this.gender = gender;
         this.size = size;
@@ -127,7 +114,6 @@ public class Animal {
         this.name = name;
         this.description = description;
         this.photos = photos;
-        this.videos = videos;
         this.status = status;
         this.attributes = attributes;
         this.environment = environment;
@@ -135,7 +121,7 @@ public class Animal {
         this.contact = contact;
         this.publishedAt = publishedAt;
         this.distance = distance;
-        this.links = links;
+        ;
     }
 
     public Integer getId() {
@@ -184,14 +170,6 @@ public class Animal {
 
     public void setBreeds(Breeds breeds) {
         this.breeds = breeds;
-    }
-
-    public Colors getColors() {
-        return colors;
-    }
-
-    public void setColors(Colors colors) {
-        this.colors = colors;
     }
 
     public String getAge() {
@@ -250,14 +228,6 @@ public class Animal {
         this.photos = photos;
     }
 
-    public List<Video> getVideos() {
-        return videos;
-    }
-
-    public void setVideos(List<Video> videos) {
-        this.videos = videos;
-    }
-
     public String getStatus() {
         return status;
     }
@@ -312,14 +282,6 @@ public class Animal {
 
     public void setDistance(Double distance) {
         this.distance = distance;
-    }
-
-    public Links getLinks() {
-        return links;
-    }
-
-    public void setLinks(Links links) {
-        this.links = links;
     }
 
 }

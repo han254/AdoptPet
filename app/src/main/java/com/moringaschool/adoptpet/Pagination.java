@@ -18,9 +18,6 @@ public class Pagination {
     @SerializedName("total_pages")
     @Expose
     private Integer totalPages;
-    @SerializedName("_links")
-    @Expose
-    private Links__1 links;
 
     /**
      * No args constructor for use in serialization
@@ -33,17 +30,15 @@ public class Pagination {
      * 
      * @param countPerPage
      * @param totalPages
-     * @param links
      * @param totalCount
      * @param currentPage
      */
-    public Pagination(Integer countPerPage, Integer totalCount, Integer currentPage, Integer totalPages, Links__1 links) {
+    public Pagination(Integer countPerPage, Integer totalCount, Integer currentPage, Integer totalPages) {
         super();
         this.countPerPage = countPerPage;
         this.totalCount = totalCount;
         this.currentPage = currentPage;
         this.totalPages = totalPages;
-        this.links = links;
     }
 
     public Integer getCountPerPage() {
@@ -78,12 +73,6 @@ public class Pagination {
         this.totalPages = totalPages;
     }
 
-    public Links__1 getLinks() {
-        return links;
-    }
 
-    public void setLinks(Links__1 links) {
-        this.links = links;
-    }
 
 }
