@@ -67,7 +67,7 @@
         android:layout_above="@+id/findPet"
         android:layout_marginBottom="20dp"
         android:padding="5dp"
-        android:hint="Enter Location"
+        android:hint="FIND PET"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

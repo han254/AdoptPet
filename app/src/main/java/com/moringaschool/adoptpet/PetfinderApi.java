@@ -7,6 +7,6 @@ import retrofit2.http.Query;
 public interface PetfinderApi {
     @GET("animals")
     Call<PetSearchResponse> getPets(
-            @Query("location") String location
+            @Query("status") String find
     );
 }

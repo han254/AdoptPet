@@ -9,11 +9,11 @@ public class PetFInderArrayAdapter extends ArrayAdapter {
     private Context mContext;
     private String[] mPets;
 
-    public PetFInderArrayAdapter(Callback<PetSearchResponse> mContext, int resource, String[] mPets) {
-        super((Context) mContext, resource);
-        this.mContext = (Context) mContext;
-        this.mPets = mPets;
-    }
+   public PetFInderArrayAdapter(Context mContext, int resource, String[] mPets){
+       super(mContext, resource);
+       this.mContext= mContext;
+       this.mPets= mPets;
+   }
 
     @Override
     public Object getItem(int position) {
