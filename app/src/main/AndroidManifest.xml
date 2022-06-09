@@ -40,7 +40,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            android:name=".PetSearchACtivity">
+            android:name=".petSearchActivity">
         </activity>
     </application>
 
