@@ -23,8 +23,10 @@ import retrofit2.Response;
 
 public class petSearchActivity extends AppCompatActivity {
     private Button adoptPet;
-    @BindView(R.id.locationTextView) TextView mLocationTextView;
-    @BindView(R.id.listView) ListView mListView;
+    @BindView(R.id.locationTextView)
+    TextView mLocationTextView;
+    @BindView(R.id.listView)
+    ListView mListView;
     private String type;
 
 
@@ -35,28 +37,43 @@ public class petSearchActivity extends AppCompatActivity {
         adoptPet = (Button) findViewById(R.id.adoptPet);
 
         ButterKnife.bind(this);
-        PetfinderApi client = PetfinderClient.getClient();
 
-
-        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                String restaurant = ((TextView) view).getText().toString();
-                Toast.makeText(petSearchActivity.this, restaurant, Toast.LENGTH_LONG).show();
-            }
-        });
         Intent intent = getIntent();
         String location = intent.getStringExtra("location");
         mLocationTextView.setText("Pets to adopt near you: " + location);
 
-        adoptPet.setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View v) {
-                                            Intent intent = new Intent(petSearchActivity.this, adoptPetActivity.class);
-                                            startActivity(intent);
-                                        }
+        PetfinderApi client = PetfinderClient.getClient();
 
-                                    }
-        );
+        Call<PetSearchResponse> call = client.getPets(location);
+        call.enqueue(new Callback<PetSearchResponse>() {
+            @Override
+            public void onResponse(Call<PetSearchResponse> call, Response<PetSearchResponse> response) {
+                if (response.isSuccessful()) {
+                    List<Animal> petsList = response.body().getAnimals();
+                    String[] pets = new String[petsList.size()];
+
+                    for (int i = 0; i < pets.length; i++) {
+                        pets[i] = petsList.get(i).getType();
+                    }
+                    ArrayAdapter adapter = new PetFInderArrayAdapter(this , android.R.layout.simple_list_item_1, pets);
+                    mListView.setAdapter(adapter);
+                } else {
+                    Toast.makeText(petSearchActivity.this, response.message(), Toast.LENGTH_LONG).show();
+                }
+                adoptPet.setOnClickListener(new View.OnClickListener() {
+                                                @Override
+                                                public void onClick(View v) {
+                                                    Intent intent = new Intent(petSearchActivity.this, adoptPetActivity.class);
+                                                    startActivity(intent);
+                                                }
+
+                                            }
+                );
+            }
+
+            @Override
+            public void onFailure(Call<PetSearchResponse> call, Throwable t) {
+            }
+        });
     }
-};
+}
