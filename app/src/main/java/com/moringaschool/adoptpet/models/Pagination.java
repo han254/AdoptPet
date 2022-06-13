@@ -5,6 +5,9 @@ package com.moringaschool.adoptpet.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import org.parceler.Parcel;
+
+@Parcel
 public class Pagination {
 
     @SerializedName("count_per_page")
