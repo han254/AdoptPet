@@ -45,8 +45,6 @@ public class petListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pet_search);
         ButterKnife.bind(this);
 
-//        adoptPet = (Button) findViewById(R.id.adoptPet);
-
         Intent intent = getIntent();
         String find = intent.getStringExtra("find");
 

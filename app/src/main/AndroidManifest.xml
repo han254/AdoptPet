@@ -19,13 +19,6 @@
             android:name=".petDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.adoptPetActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.moringaschool.adoptpet.ui.MainActivity"></meta-data>
-        </activity>
-        <activity
             android:name=".ui.petListActivity"
             android:exported="false">
             <meta-data
