@@ -22,5 +22,17 @@ public class petDetailActivity extends AppCompatActivity {
     private petPagerAdapter adapterViewPager;
     List<Animal> mPets;
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_pet_detail);
+        ButterKnife.bind(this);
 
+        mPets = Parcels.unwrap(getIntent().getParcelableExtra("pets"));
+        int startingPosition = getIntent().getIntExtra("position", 0);
+
+        adapterViewPager = new petPagerAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT, mPets);
+        mViewPager.setAdapter(adapterViewPager);
+        mViewPager.setCurrentItem(startingPosition);
+    }
 }

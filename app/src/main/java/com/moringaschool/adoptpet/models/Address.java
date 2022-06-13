@@ -9,12 +9,12 @@ import org.parceler.Parcel;
 @Parcel
 public class Address {
 
-    @SerializedName("address1")
-    @Expose
-    private Object address1;
-    @SerializedName("address2")
-    @Expose
-    private Object address2;
+//    @SerializedName("address1")
+//    @Expose
+//    private Object address1;
+//    @SerializedName("address2")
+//    @Expose
+//    private Object address2;
     @SerializedName("city")
     @Expose
     private String city;
@@ -46,29 +46,29 @@ public class Address {
      */
     public Address(Object address1, Object address2, String city, String state, String postcode, String country) {
         super();
-        this.address1 = address1;
-        this.address2 = address2;
+//        this.address1 = address1;
+//        this.address2 = address2;
         this.city = city;
         this.state = state;
         this.postcode = postcode;
         this.country = country;
     }
 
-    public Object getAddress1() {
-        return address1;
-    }
-
-    public void setAddress1(Object address1) {
-        this.address1 = address1;
-    }
-
-    public Object getAddress2() {
-        return address2;
-    }
-
-    public void setAddress2(Object address2) {
-        this.address2 = address2;
-    }
+//    public Object getAddress1() {
+//        return address1;
+//    }
+//
+//    public void setAddress1(Object address1) {
+//        this.address1 = address1;
+//    }
+//
+//    public Object getAddress2() {
+//        return address2;
+//    }
+//
+//    public void setAddress2(Object address2) {
+//        this.address2 = address2;
+//    }
 
     public String getCity() {
         return city;
