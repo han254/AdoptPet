@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.moringaschool.adoptpet.R;
 import com.moringaschool.adoptpet.models.Animal;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -41,6 +42,7 @@ public class petListAdapter extends RecyclerView.Adapter<petListAdapter.petViewH
         }
 
         public void bindPet(Animal pet) {
+//            Picasso.get().load(pet.getPhotos().into(petImageView));
             mNameTextView.setText(pet.getName());
             mBreedTextView.setText(pet.getBreeds().getPrimary());
             mContactTextView.setText(pet.getContact().getEmail());
