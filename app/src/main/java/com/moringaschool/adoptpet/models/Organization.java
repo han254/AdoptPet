@@ -1,11 +1,10 @@
 
-package com.moringaschool.adoptpet;
-
+package com.moringaschool.adoptpet.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Self {
+public class Organization {
 
     @SerializedName("href")
     @Expose
@@ -15,14 +14,14 @@ public class Self {
      * No args constructor for use in serialization
      * 
      */
-    public Self() {
+    public Organization() {
     }
 
     /**
      * 
      * @param href
      */
-    public Self(String href) {
+    public Organization(String href) {
         super();
         this.href = href;
     }

@@ -11,7 +11,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.moringaschool.adoptpet.R;
-import com.moringaschool.adoptpet.petSearchActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

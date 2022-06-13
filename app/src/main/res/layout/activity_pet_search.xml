@@ -4,26 +4,34 @@
     android:layout_height="match_parent"
     android:background="@color/lightgray">
 
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/findTextView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
 
-    <Button
-        android:id="@+id/adoptPet"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="25dp"
-        android:background="@drawable/rounded_button"
-        android:bottomLeftRadius="10dp"
-        android:bottomRightRadius="10dp"
-        android:fontWeight="200"
-        android:text="Adopt Pet"
-        android:textColor="@color/white"
-        android:textSize="22sp"
-        android:topLeftRadius="10dp"
-        android:topRightRadius="10dp" />
+<!--    <Button-->
+<!--        android:id="@+id/adoptPet"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginBottom="25dp"-->
+<!--        android:background="@drawable/rounded_button"-->
+<!--        android:bottomLeftRadius="10dp"-->
+<!--        android:bottomRightRadius="10dp"-->
+<!--        android:fontWeight="200"-->
+<!--        android:text="Adopt Pet"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="22sp"-->
+<!--        android:topLeftRadius="10dp"-->
+<!--        android:topRightRadius="10dp" />-->
 
     <TextView
-        android:id="@+id/locationTextView"
+        android:id="@+id/findTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -31,21 +39,38 @@
         android:layout_marginTop="0dp"
         android:text="Pets to adopt:"
         android:textStyle="bold"
-        android:textSize="18dp"/>
+        android:textSize="18dp"
+        android:visibility="gone"/>
 
 
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/locationTextView"
+        android:layout_below="@+id/findTextView"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginTop="-70dp"
         android:layout_marginEnd="-9dp"
         android:layout_marginRight="-9dp"
-        android:textColor="@color/dark">
+        android:textColor="@color/dark"
+        android:visibility="gone">
 
     </ListView>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/errorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="16dp"
+        android:visibility="gone"
+        />
 
 </RelativeLayout>

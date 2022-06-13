@@ -1,8 +1,10 @@
-package com.moringaschool.adoptpet;
+package com.moringaschool.adoptpet.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.moringaschool.adoptpet.R;
 
 public class adoptPetActivity extends AppCompatActivity {
 

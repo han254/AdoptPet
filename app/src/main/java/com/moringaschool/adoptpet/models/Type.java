@@ -1,5 +1,5 @@
 
-package com.moringaschool.adoptpet;
+package com.moringaschool.adoptpet.models;
 
 
 import com.google.gson.annotations.Expose;

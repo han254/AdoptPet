@@ -1,4 +1,4 @@
-package com.moringaschool.adoptpet;
+package com.moringaschool.adoptpet.network;
 
 import static com.moringaschool.adoptpet.constants.Petfinder_API_KEY;
 import static com.moringaschool.adoptpet.constants.Petfinder_BASE_URL;
