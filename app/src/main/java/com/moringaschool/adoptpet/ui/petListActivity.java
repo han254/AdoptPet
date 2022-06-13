@@ -29,7 +29,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class petSearchActivity extends AppCompatActivity {
+public class petListActivity extends AppCompatActivity {
     private Button adoptPet;
     @BindView(R.id.recyclerView) RecyclerView mRecyclerView;
     @BindView(R.id.errorTextView) TextView mErrorTextView;
@@ -45,7 +45,7 @@ public class petSearchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pet_search);
         ButterKnife.bind(this);
 
-        adoptPet = (Button) findViewById(R.id.adoptPet);
+//        adoptPet = (Button) findViewById(R.id.adoptPet);
 
         Intent intent = getIntent();
         String find = intent.getStringExtra("find");
@@ -61,9 +61,9 @@ public class petSearchActivity extends AppCompatActivity {
 
                 if (response.isSuccessful()) {
                     pets = response.body().getAnimals();
-                    mAdapter = new petListAdapter(petSearchActivity.this, pets);
+                    mAdapter = new petListAdapter(petListActivity.this, pets);
                     mRecyclerView.setAdapter(mAdapter);
-                    RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(petSearchActivity.this);
+                    RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(petListActivity.this);
                     mRecyclerView.setLayoutManager(layoutManager);
                     mRecyclerView.setHasFixedSize(true);
 

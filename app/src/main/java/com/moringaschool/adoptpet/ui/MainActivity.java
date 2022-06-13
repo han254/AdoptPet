@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String location = mLocationEditText.getText().toString();
                 Log.d(TAG, location);
-                Intent intent = new Intent(MainActivity.this, petSearchActivity.class);
+                Intent intent = new Intent(MainActivity.this, petListActivity.class);
                 intent.putExtra("animal",mLocationEditText.getText().toString());
                 startActivity(intent);
                 intent.putExtra("location", location);
