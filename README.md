@@ -1,9 +1,9 @@
 # AdoptPet
 ### By **Peter Njenga**
 ## Description
-An Android App that helps users find and select pets to adopt near their location.
+An Android App that helps users find and select pets to adopt near their location according to the pet's status(adopted/not-adopted).
 ## Setup/Installation Requirements
-* Clone the repository(https://github.com/han254/adoptPet.git)
+* Clone the repository(https://github.com/han254/adoptPet/tree/week-2)
 * Build
 * Enable gradle and import all dependencies
 * Run it on an emulator or device
