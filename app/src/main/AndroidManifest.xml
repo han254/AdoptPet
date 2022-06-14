@@ -16,7 +16,7 @@
         android:theme="@style/Theme.AdoptPet"
         tools:targetApi="31">
         <activity
-            android:name=".petDetailActivity"
+            android:name=".ui.petDetailActivity"
             android:exported="false" />
         <activity
             android:name=".ui.petListActivity"
@@ -28,13 +28,11 @@
         <activity
             android:name=".ui.MainActivity"
             android:exported="true">
-            android:theme="@style/NoActionBarTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            android:name=".petSearchActivity">
         </activity>
     </application>
 

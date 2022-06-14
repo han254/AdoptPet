@@ -4,13 +4,23 @@
     android:layout_height="match_parent"
     android:background="@color/lightgray">
 
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="27dp"
+        android:fontWeight="700"
+        android:text="Wuff"
+        android:textColor="@color/lightgreen"
+        android:textSize="34sp" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="267dp"
+        android:layout_height="351dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/pet1" />
+        android:src="@drawable/background1" />
 
     <Button
         android:id="@+id/findPet"
@@ -30,32 +40,24 @@
         android:topRightRadius="10dp" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="291dp"
+        android:layout_marginTop="371dp"
         android:fontWeight="700"
-        android:text="Adopt"
+        android:gravity="center"
+        android:text="Discover Best Friends"
         android:textColor="@color/dark"
         android:textSize="34sp" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="346dp"
-        android:fontWeight="700"
-        android:text="Your Favorite Pet"
-        android:textColor="@color/dark"
-        android:textSize="34sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="413dp"
+        android:layout_marginTop="422dp"
         android:fontWeight="400"
-        android:text="Find your new pet and we'll guide you the adoption process! See how to adopt."
+        android:gravity="center"
+        android:text="Planning to add a new member in your family! Let's search for your friend and name it"
         android:textColor="@color/dark"
         android:textSize="20sp" />
 
