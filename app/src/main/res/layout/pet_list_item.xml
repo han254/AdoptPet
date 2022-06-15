@@ -25,6 +25,7 @@
             android:fontFamily="@font/epilogue"
             android:text="Pet Name"
             android:textSize="20dp"
+            android:textColor="@color/dark"
             android:textFontWeight="400" />
 
         <TextView
