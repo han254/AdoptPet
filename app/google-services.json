@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "709056857295",
+    "project_id": "adoptpet-8dfb4",
+    "storage_bucket": "adoptpet-8dfb4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709056857295:android:cb5f6205d33f8f5361e3ba",
+        "android_client_info": {
+          "package_name": "com.moringaschool.adoptpet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "709056857295-1d54nsgsnl0qtddilegmpv1l2a8lotq4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.moringaschool.adoptpet",
+            "certificate_hash": "2ebdc67eaccbd22a76dd1275ddd75ef0824928a8"
+          }
+        },
+        {
+          "client_id": "709056857295-d39pbassgvnl69lepgpvtjvg7it5boom.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVZB1jzUrlNSSahb2ORPij6-KTBk7dg7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "709056857295-d39pbassgvnl69lepgpvtjvg7it5boom.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
