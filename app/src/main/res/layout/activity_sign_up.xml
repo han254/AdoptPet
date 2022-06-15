@@ -81,7 +81,22 @@
         android:paddingLeft="15dp"
         android:text="Confirm password"
         android:textColor="@color/lightd" />
-
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="150dp"
+        android:background="@drawable/rounded_button"
+        android:bottomLeftRadius="10dp"
+        android:bottomRightRadius="10dp"
+        android:fontWeight="200"
+        android:text="Sign Up"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:topLeftRadius="10dp"
+        android:topRightRadius="10dp" />
 
     <TextView
         android:layout_width="fill_parent"
