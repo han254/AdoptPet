@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.service.autofill.Validator;
+import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.moringaschool.adoptpet.R;
 
 import butterknife.BindView;
@@ -20,6 +22,8 @@ import butterknife.ButterKnife;
 
 public class SignUp extends AppCompatActivity implements View.OnClickListener {
     public static final String TAG = SignUp.class.getSimpleName();
+
+    private FirebaseAuth.AuthStateListener mAuthListener;
 
     @BindView(R.id.SignUp)
     Button mSignUpButton;
@@ -47,6 +51,9 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
 
         mLoginTextView.setOnClickListener(this);
         mSignUpButton.setOnClickListener(this);
+
+        createAuthStateListener();
+
     }
 
     @Override
@@ -60,27 +67,37 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
 
         if (v == mSignUpButton) {
 
-            if (v == mSignUpButton) {
-                createNewUser();
-            }
+        }
+    }
+    @Override
+    public void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListener);
+    }
 
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (mAuthListener != null) {
+            mAuth.removeAuthStateListener(mAuthListener);
         }
     }
 
-    private void createNewUser() {
-        final String name = mNameEditText.getText().toString().trim();
-        final String email = mEmailEditText.getText().toString().trim();
-        String password = mPasswordEditText.getText().toString().trim();
-        String confirmPassword = mConfirmPasswordEditText.getText().toString().trim();
+    private void createAuthStateListener() {
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
 
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, task -> {
-                    if (task.isSuccessful()) {
-                        Log.d(TAG, "Authentication successful");
-                    } else {
-                        Toast.makeText(SignUp.this, "Authentication failed.",
-                                Toast.LENGTH_SHORT).show();
-                    }
-                });
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                final FirebaseUser user = firebaseAuth.getCurrentUser();
+                if (user != null) {
+                    Intent intent = new Intent(SignUp.this, MainActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
+                    finish();
+                }
+            }
+
+        };
     }
+
 }
