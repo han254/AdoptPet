@@ -40,9 +40,6 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
     @BindView(R.id.passwordEditText) EditText mPasswordEditText;
     @BindView(R.id.confirmPasswordEditText) EditText mConfirmPasswordEditText;
     @BindView(R.id.loginTextView) TextView mLoginTextView;
-    @BindView(R.id.firebaseProgressBar) ProgressBar mSignInProgressBar;
-    @BindView(R.id.loadingTextView) TextView mLoadingSignUp;
-
 
     private FirebaseAuth mAuth;
 
@@ -60,16 +57,6 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
 
         createAuthStateListener();
 
-    }
-    private void showProgressBar() {
-        mSignInProgressBar.setVisibility(View.VISIBLE);
-        mLoadingSignUp.setVisibility(View.VISIBLE);
-        mLoadingSignUp.setText("Sign Up process in Progress");
-    }
-
-    private void hideProgressBar() {
-        mSignInProgressBar.setVisibility(View.GONE);
-        mLoadingSignUp.setVisibility(View.GONE);
     }
 
     @Override
@@ -138,16 +125,11 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
         boolean validName = isValidName(name);
         boolean validPassword = isValidPassword(password, confirmPassword);
         if (!validEmail || !validName || !validPassword) return;
-
-        showProgressBar();
-
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
 
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-
-                        hideProgressBar();
 
                         if (task.isSuccessful()) {
                             Log.d(TAG, "Authentication successful");

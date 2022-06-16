@@ -4,24 +4,6 @@
     android:layout_height="match_parent"
     android:background="@color/darkblue">
 
-    <ProgressBar
-        android:id="@+id/firebaseProgressBar"
-        android:layout_centerInParent="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone" />
-
-    <TextView
-        android:id="@+id/loadingTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/firebaseProgressBar"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:visibility="gone" />
-
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
