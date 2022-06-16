@@ -151,6 +151,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
 
                         if (task.isSuccessful()) {
                             Log.d(TAG, "Authentication successful");
+                            createFirebaseUserProfile(Objects.requireNonNull(task.getResult().getUser()));
                         } else {
                             Toast.makeText(SignUp.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
