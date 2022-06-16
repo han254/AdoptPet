@@ -39,7 +39,18 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         mPasswordLoginButton.setOnClickListener(this);
 
     }
-
+    private void loginWithPassword() {
+        String email = mEmailEditText.getText().toString().trim();
+        String password = mPasswordEditText.getText().toString().trim();
+        if (email.equals("")) {
+            mEmailEditText.setError("Please enter your email");
+            return;
+        }
+        if (password.equals("")) {
+            mPasswordEditText.setError("Password cannot be blank");
+            return;
+        }
+    }
     @Override
     public void onClick(View v) {
         if (v == mRegisterTextView) {
