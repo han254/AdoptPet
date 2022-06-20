@@ -49,21 +49,21 @@ class FirebaseRestaurantViewHolder extends RecyclerView.ViewHolder implements Vi
 
     @Override
     public void onClick(View view) {
-        final ArrayList<Animal> restaurants = new ArrayList<>();
+        final ArrayList<Animal> pets = new ArrayList<>();
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference(constants.FIREBASE_CHILD_PETS);
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
 
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    restaurants.add(snapshot.getValue(Animal.class));
+                    pets.add(snapshot.getValue(Animal.class));
                 }
 
                 int itemPosition = getLayoutPosition();
 
                 Intent intent = new Intent(mContext, petDetailActivity.class);
                 intent.putExtra("position", itemPosition + "");
-                intent.putExtra("restaurants", Parcels.wrap(restaurants));
+                intent.putExtra("pets", Parcels.wrap(pets));
 
                 mContext.startActivity(intent);
             }

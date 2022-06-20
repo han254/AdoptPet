@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.22135416666666666" />
         <entry key="app/src/main/res/drawable/editbackground.xml" value="0.1775" />
         <entry key="app/src/main/res/drawable/ic_baseline_remove_red_eye_24.xml" value="0.1775" />
         <entry key="app/src/main/res/drawable/rounded_button.xml" value="0.178" />
