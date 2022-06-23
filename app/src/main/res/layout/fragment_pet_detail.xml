@@ -106,7 +106,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:text="Save Pet"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:background="@color/lightgreen"
+                android:layout_marginBottom="20dp"/>
         </RelativeLayout>
     </LinearLayout>
 </FrameLayout>

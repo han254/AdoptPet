@@ -4,12 +4,16 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.22135416666666666" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1775" />
         <entry key="app/src/main/res/drawable/editbackground.xml" value="0.1775" />
         <entry key="app/src/main/res/drawable/ic_baseline_remove_red_eye_24.xml" value="0.1775" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/rounded_button.xml" value="0.178" />
         <entry key="app/src/main/res/layout-land/activity_login.xml" value="0.33513513513513515" />
         <entry key="app/src/main/res/layout-sw600dp/activity_login.xml" value="0.1453125" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_details.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_loginn.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_pet_detail.xml" value="0.19375" />
@@ -19,6 +23,7 @@
         <entry key="app/src/main/res/layout/pet_list_item.xml" value="0.19375" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.19375" />
         <entry key="app/src/main/res/menu/menu_main.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/menu_search.xml" value="0.1" />
       </map>
     </option>
   </component>

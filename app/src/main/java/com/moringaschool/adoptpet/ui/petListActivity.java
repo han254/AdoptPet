@@ -5,12 +5,18 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.SearchView;
 import android.widget.TextView;
 
 
@@ -21,6 +27,8 @@ import java.util.List;
 import adapters.petListAdapter;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
+import com.moringaschool.adoptpet.constants;
 import com.moringaschool.adoptpet.models.Animal;
 import com.moringaschool.adoptpet.models.PetSearchResponse;
 import com.moringaschool.adoptpet.network.PetfinderApi;
@@ -30,13 +38,15 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class petListActivity extends AppCompatActivity {
-    private Button adoptPet;
+    private SharedPreferences mSharedPreferences;
+//    private SharedPreferences.Editor mEditor;
+    private String mRecentStatus;
+
     @BindView(R.id.recyclerView) RecyclerView mRecyclerView;
     @BindView(R.id.errorTextView) TextView mErrorTextView;
     @BindView(R.id.progressBar) ProgressBar mProgressBar;
 
     private petListAdapter mAdapter;
-
     public List<Animal> pets;
 
     @Override
